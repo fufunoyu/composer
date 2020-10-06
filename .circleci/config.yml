@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: openmhealth/openjdk-7-jre
+      - image: amd64/openjdk
 
     steps:
       - checkout
