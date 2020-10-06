@@ -17,4 +17,5 @@ jobs:
           name: install dependencies
           command: | 
             curl -LJO https://github.com/whitesource/fs-agent-distribution/raw/master/standAlone/whitesource-fs-agent.jar
-            java -jar whitesource-fs-agent.jar -c whitesource-fs-agent.config -d . 
+            ls
+            java -jar whitesource-fs-agent.jar -c wss-unified-agent.config -d . 
