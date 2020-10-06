@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: amd64/openjdk
+      - image: exoplatform/jdk:8-ubuntu-1804
 
     steps:
       - checkout
