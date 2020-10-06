@@ -8,10 +8,9 @@ jobs:
       - checkout
 
       - run: apt update # PHP CircleCI 2.0 Configuration File# PHP CircleCI 2.0 Configuration File sudo apt install zlib1g-dev libsqlite3-dev
-      - run: apt-get install curl -y
-      - run: curl -s https://getcomposer.org/installer | php
-      - run: mv composer.phar /usr/local/bin/composer
-      #- run: docker-php-ext-install zip
+      - run: apt install curl php-cli php-mbstring git unzip -y
+      - run: curl -sS https://getcomposer.org/installer -o composer-setup.php
+      - run: php composer-setup.php --install-dir=/usr/local/bin --filename=composer
       - run: composer install -n --prefer-dist
 
       - run: 
