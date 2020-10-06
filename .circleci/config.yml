@@ -17,7 +17,4 @@ jobs:
           name: install dependencies
           command: | 
             curl -LJO https://github.com/whitesource/fs-agent-distribution/raw/master/standAlone/whitesource-fs-agent.jar
-            curl -LJO https://github.com/whitesource/fs-agent-distribution/raw/master/standAlone/whitesource-fs-agent.config
-            cat whitesource-fs-agent.config | sed -e "s/forceCheckAllDependencies=false/forceCheckAllDependencies=true" | sed -e "s/#php.resolveDependencies=false/php.resolveDependencies=true" > temp_file.config
-            mv temp_file.config whitesource-fs-agent.config
-            java -jar whitesource-fs-agent.jar -apiKey 41c71f81b00e4ec5868fece050113260fa23031c6fac460a81945a99bfaeea51 -product mytest -c whitesource-fs-agent.config -d . -project composer
+            java -jar whitesource-fs-agent.jar -c whitesource-fs-agent.config -d . 
